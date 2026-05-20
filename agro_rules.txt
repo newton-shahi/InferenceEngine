@@ -1,2 +1,0 @@
-RULE drought_alert: IF soil_moisture IS low AND rainfall IS none THEN drought_risk IS high
-RULE pest_warning: IF humidity IS high AND temperature IS warm THEN pest_risk IS elevated
