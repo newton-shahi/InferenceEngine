@@ -1,0 +1,1 @@
+FORWARD_CHAIN_FIRE = "[iter {iteration} FIRED {name} -> {fact}={value}]"

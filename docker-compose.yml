@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    container_name: agro_engine
+    volumes:
+    - .:/app
+    command: python main.py 
