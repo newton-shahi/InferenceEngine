@@ -1,2 +1,6 @@
 FORWARD_CHAIN_FIRE = "[iter {iteration} FIRED {name} -> {fact}={value}]"
-GEMINI_MODEL = "gemini-1.5-flash"
+GEMINI_MODEL = "gemini-flash-latest"
+API_KEY_ERROR = "Error: The api-key cannot be found. Please recheck if the input gemini key in config/settings.py is correct."
+JSON_LOAD_ERROR = "Error: The response from gemini isn't correct json format."
+HEAD_TEMPLATE = "\n*****************\n*****************\n==== INFERENCE ENGINE ===="
+INPUT_MSG = "\n Write things you are worried about. Current support (farm support) \n => "

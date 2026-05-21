@@ -103,3 +103,4 @@ desktop.ini
 *.orig
 *.log
 .cache/
+config/settings.py

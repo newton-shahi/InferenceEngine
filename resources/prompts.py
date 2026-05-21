@@ -11,47 +11,48 @@ OUTPUT FORMAT (STRICT):
 Return exactly this structure:
 
 {
-  "rainfall": "",
-  "temperature": "",
-  "wind_speed": "",
-  "crop_stage": "",
-  "humidity": ""
+ "rainfall": "",
+ "temperature": "",
+ "wind_speed": "",
+ "crop_stage": "",
+ "humidity": ""
 }
 
 FIELD DEFINITIONS:
 
 1. rainfall:
-- "none" → no rain, no rainfall, dry conditions
-- "low" → light rain, occasional rain
-- "high" → heavy rain, continuous rain, flooding rain
+- "none" → no rain, no rainfall, dry conditions and anything related to this
+- "low" → light rain, occasional rain and anything related to this
+- "high" → heavy rain, continuous rain, flooding rain and anything related to this
 
 2. temperature:
-- "low" → cold, freezing, chilly
-- "medium" → normal, moderate, mild
-- "high" → hot, very hot, extreme heat
+- "low" → cold, freezing, chilly and anything related to this
+- "medium" → normal, moderate, mild and anything related to this
+- "high" → hot, very hot, extreme heat and anything related to this
 
 3. wind_speed:
-- "low" → calm, still air, gentle breeze
-- "high" → strong wind, fast wind, stormy wind
+- "low" → calm, still air, gentle breeze and anything related to this
+- "high" → strong wind, fast wind, stormy wind and anything related to this
 
 4. crop_stage:
-- "low" → just planted, seedling, just starting to grow
-- "medium" → growing, vegetative, partially grown
-- "high" → flowering, mature, harvest-ready
+- "low" → just planted, seedling, just starting to grow and anything related to this
+- "medium" → growing, vegetative, partially grown and anything related to this
+- "high" → flowering, mature, harvest-ready and anything related to this
 
 5. humidity:
-- "low" → dry air, very low moisture
-- "high" → humid, moist, sticky air, high moisture
+- "low" → dry air, very low moisture and anything related to this
+- "high" → humid, moist, sticky air, high moisture and anything related to this
 
 RULES:
-- Output ONLY valid JSON
-- No explanations, no extra text
+- Output ONLY valid JSON and anything related to this
+- No explanations, no extra text and anything related to this
 - Always include all 5 fields
-- If field is absent then replace by _
 - If ambiguous, choose the closest match
 - Normalize synonyms:
-  "no rain" → "none"
-  "very hot" → "high"
+ "no rain" → "none"
+ "very hot" → "high"
+- The value of the fields should be inferred and understood and filled if possible. 
+- If field value is absent and cannot be inferred from the user input at all then replace by _
 
 EXAMPLE:
 
@@ -60,13 +61,16 @@ I am a farmer. My farm gets no rain. It is very hot and wind blows very fast. Cr
 
 Output:
 {
-  "rainfall": "none",
-  "temperature": "high",
-  "wind_speed": "high",
-  "crop_stage": "low",
-  "humidity": "low"
+ "rainfall": "none",
+ "temperature": "high",
+ "wind_speed": "high",
+ "crop_stage": "low",
+ "humidity": "low"
 }
 
-The natural language input is:                       
-$nl_query                                           
+Now the real task.
+The input is:                       
+$nl_query                          
+
+                                                 
                                        """)

@@ -1,6 +1,8 @@
 from rule_engine.engine.memory import ExplainableWM
 from rule_engine.dsl.parse import load_rules
 from rule_engine.engine.inference_engine import forward_chain
+from agent.extractor import extract_facts
+from rule_engine.utils.user_input import input_processing
 
 rules = load_rules("rule/agro_rules.dsl")
 print(rules)
@@ -15,4 +17,7 @@ forward_chain(rules, wm)
 print([str(f) for f in wm.all_facts()])
 print(wm.explain("water_emergency"))
 
-
+user_input = input_processing()
+extracted_data = extract_facts("a",user_input)
+for seed_fact,seed_value in extracted_data.items():
+    print(f"{seed_fact} = {seed_value} ")
