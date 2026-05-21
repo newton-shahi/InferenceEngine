@@ -3,5 +3,8 @@ services:
     build: .
     container_name: agro_engine
     volumes:
-    - .:/app
-    command: python main.py 
+      - .:/app
+    command: python main.py
+
+    stdin_open: true
+    tty: true

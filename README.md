@@ -8,10 +8,11 @@ The system concludes with a modularized agricultural expert engine (`agroEngine`
 
 ## 🚀 Quick Start & How to Open
 
-### Prerequisites
-- **Python 3.10+** (leveraging structural typing, explicit type hints, and advanced pattern matching components)
-- **Lark Suite**: For managing formal grammar evaluations.
+# Build the Docker image (no cache)
+docker compose build --no-cache
 
+# Run the application
+docker compose up
 
 ##  Final System: agroEngine
 The final system integrates all modules into a complete expert system.
