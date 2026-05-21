@@ -1,6 +1,5 @@
 from rule_engine.engine.memory import ExplainableWM,rule
 import config.string_literals as literals
-MAX_ITER = 100
 
 def evaluate_rule(rule:rule,wm:ExplainableWM):
     for cond in rule.conditions:
@@ -9,7 +8,7 @@ def evaluate_rule(rule:rule,wm:ExplainableWM):
             return False
     return True
 
-def forward_chain(rules: list[rule],wm:ExplainableWM, max_iter:int = MAX_ITER):
+def forward_chain(rules: list[rule],wm:ExplainableWM, max_iter:int = literals.MAX_ITER):
     for iteration in range(max_iter):
         fired_any_global = False
         while True:
