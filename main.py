@@ -14,16 +14,15 @@ def detailed_output():
     for f in wm.all_facts():
         print(literals.FACT_TEMPLATE)
         print(str(f))
-        print("\n")
         print(literals.WHY_TEMPLATE)
         print(wm.explain(f.name))
 
 def short_output():
     print(literals.RESULT_INFERENCE)
+    print(literals.FACT_TEMPLATE)
     for f in wm.all_facts():
-        print(literals.FACT_TEMPLATE)
         print(str(f))
-        print("\n")
+        #print("\n")
 
 
 

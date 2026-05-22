@@ -18,7 +18,7 @@ INPUT_MSG_ERROR = Template("""
 RESULT_DETAILS_INFERENCE = "\n=== 🧾🧾🧾 DETAILED RESULT with Why explained === \n"
 RESULT_INFERENCE = "\n=== 🧾RESULT === \n"
 FACT_TEMPLATE = "\n📬 FACT!\n"
-WHY_TEMPLATE ="\nWhy above fact is derived. Because :\n"
+WHY_TEMPLATE ="Why above fact is derived. Because :\n"
 DETAILS_ABOVE = "\nLOOK above for more details of why!\n"
 RUN_INFERENCE ="\n EVALUATING.....\n"
 
